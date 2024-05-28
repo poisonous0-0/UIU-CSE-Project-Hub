@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Timer</title>
+</head>
+
+<body>
+    <div>
+        <input type="number" id="duration" placeholder="Enter duration in seconds">
+        <button onclick="startTimer()">Start Timer</button>
+    </div>
+
+    <script>
+        function startTimer() {
+            var durationInput = document.getElementById('duration');
+            var duration = parseInt(durationInput.value);
+
+            if (isNaN(duration) || duration <= 0) {
+                alert('Please enter a valid positive number for the duration.');
+                return;
+            }
+
+            localStorage.setItem('timerDuration', duration);
+            window.location.href = 'timer.html';
+        }
+    </script>
+</body>
+
+</html>

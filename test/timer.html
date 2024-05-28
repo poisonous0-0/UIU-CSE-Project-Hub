@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="timer" id="timer">00:00:00</div>
+
+    <script>
+        // Retrieve duration from local storage
+        const duration = localStorage.getItem('timerDuration');
+
+        if (!duration) {
+            alert('Timer duration not set. Redirecting to set timer page.');
+            window.location.href = 'index.html';
+        }
+
+        // Start timer
+        startTimer(parseInt(duration));
+
+        function startTimer(duration) {
+            var timerDisplay = document.getElementById('timer');
+            var timer = duration;
+
+            var intervalId = setInterval(function () {
+                var hours = Math.floor(timer / 3600);
+                var minutes = Math.floor((timer % 3600) / 60);
+                var seconds = timer % 60;
+
+                hours = (hours < 10) ? '0' + hours : hours;
+                minutes = (minutes < 10) ? '0' + minutes : minutes;
+                seconds = (seconds < 10) ? '0' + seconds : seconds;
+
+                timerDisplay.innerHTML = hours + ':' + minutes + ':' + seconds;
+
+                if (--timer < 0) {
+                    clearInterval(intervalId);
+                    timerDisplay.innerHTML = "00:00:00";
+                    alert("Timer Completed!");
+                }
+            }, 1000);
+        }
+    </script>
+</body>
+
+</html>

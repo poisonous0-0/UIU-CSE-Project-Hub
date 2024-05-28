@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hover Effect with Slide</title>
+<style>
+    /* Style for sub-anchor tags */
+    .sub-links {
+        display: block;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 120px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        padding: 5px 0;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.3s ease;
+    }
+
+    .sub-links a {
+        color: black;
+        padding: 10px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .sub-links a:hover {
+        background-color: #f1f1f1;
+    }
+
+    /* Show sub-links on hover */
+    .parent:hover .sub-links {
+        max-height: 1000px; /* Adjust this value based on your content */
+    }
+</style>
+</head>
+<body>
+
+<!-- Anchor tag with sub-links -->
+<div class="parent">
+    <a href="#">Hover over me</a>
+    <div class="sub-links">
+        <a href="#">Sub Link 1</a>
+        <a href="#">Sub Link 2</a>
+    </div>
+</div>
+
+</body>
+</html>
