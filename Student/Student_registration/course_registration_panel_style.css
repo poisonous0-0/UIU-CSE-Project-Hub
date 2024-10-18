@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+ul, ol{
+    list-style-type: none;
+}
+.container{
+    width: 100%;
+    margin: 0px auto;
+}
+h1, h2, h3, h4, h5, h6, p{
+    line-height: 0.8;
+}
+body{
+    background-image: url("/Images/background2.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:100% 100%;
+}
+
+nav{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.nav_wrapper{
+    padding-top: 29px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 437px;
+}
+
+.logo{
+    padding-left: 77px;
+}
+.menu{
+    padding-right: 77px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 44px;
+}
+.menu ul{
+    padding: 19px 33px;
+    border-radius: 20px;
+    background-color: rgba(217, 217, 217, 0.10);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 96px;
+}
+.menu ul li a{
+    color: #000;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: auto;
+    transition: all linear 0.2s;
+}
+.menu ul li a:hover{
+    color: whitesmoke;
+}
+
+.registration_form{
+    width: 1280px;
+    margin:0px auto;
+    margin-top: 220px;
+    display: flex;
+    flex-direction: column;
+    column-gap: 10px;
+    align-items: center;
+}
+#headings{
+    color: whitesmoke;
+    font-family: 'Inter', sans-serif;
+    font-size: 50px;
+    font-weight: 750;
+    line-height: auto;
+    margin-bottom: 20px;
+
+}
+.form_wrapper{
+    background: transparent;
+    border-radius: 10px;
+    padding: 53px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 100px;
+    backdrop-filter: blur(100px);
+}
+.registration_wrapper{
+    color: whitesmoke;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: auto;
+}
+#reg_form{
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+#course{
+    padding: 15px 15px;
+    margin-top: 10px;
+    width:389px;
+    height:53px;
+    border-radius: 10px;
+    border-color: transparent;
+}
+#teamMembers{
+    display: flex;
+    flex-direction: column;
+    width: 389px;
+}
+#teamMembers input{
+    padding: 15px 15px;
+    margin-top: 10px;
+    width:389px;
+    border-radius: 10px;
+}
+#faculty_email{
+    padding: 15px 15px;
+    margin-top: 10px;
+    width:389px;
+    border-radius: 10px;
+    border-color: transparent;
+}   
+
+input[type="submit"] {
+    margin-top: 15px;
+    padding: 15px 20px; /* Adjust padding as needed */
+    background-color: #FB6308; /* Green background color */
+    color: white; /* White text color */
+    border: none; /* No border */
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer; /* Cursor style */
+    transition: all linear 0.3s;
+    font-weight: 600;
+}
+input[type="submit"]:hover {
+    background-color: black;
+    color: #FB6308; /* Darker green background color */
+}
+
+
